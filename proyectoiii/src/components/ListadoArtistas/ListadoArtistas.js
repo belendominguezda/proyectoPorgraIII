@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import './ListadoArtistas.css'
+
 //ESTE COMPONENTE TRAE LA API DEL TOP 10 ARTISTAS CON SUS ALLBUMES, GENEROS, ETC. (sería como el "global")
 
 class ListadoArtistas extends Component {

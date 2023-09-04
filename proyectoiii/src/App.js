@@ -1,4 +1,5 @@
 import ListadoArtistas from "./components/ListadoArtistas/ListadoArtistas";
+import './styles.css'
 
 function App() {
   return (

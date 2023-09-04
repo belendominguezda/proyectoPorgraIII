@@ -1,0 +1,1 @@
+import './DetalleCancion.css'
