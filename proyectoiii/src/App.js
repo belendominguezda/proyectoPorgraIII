@@ -1,4 +1,4 @@
-import ListadoArtistas from "./components/Pelicula/ListadoArtistas";
+import ListadoArtistas from "./components/ListadoArtistas/ListadoArtistas";
 
 function App() {
   return (
