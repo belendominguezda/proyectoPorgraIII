@@ -10,3 +10,8 @@
     flex-wrap: wrap;
     margin: 2vh 0;
 }
+
+section {
+    background-color: aqua;
+
+}
