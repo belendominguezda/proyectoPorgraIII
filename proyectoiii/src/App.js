@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NotFound from './components/NotFound/NotFound';
 
 import Home from './screens/Home/Home';
 import DetalleCancion from './screens/DetalleCancion/DetalleCancion';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/ver-todas-las-canciones" component={VerTodasLasCanciones} /> {/*Ver todas las canciones*/}
         <Route path="/ver-todos-los-albums" component={""} /> {/*Ver todos los albums*/}
         <Route path="/resultado-busqueda/:busqueda" component={ResultadoBusqueda} />
+        <Route component = {NotFound}/>
       </Switch>
     </BrowserRouter>
   );
