@@ -8,7 +8,8 @@ class Articulo extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            verMas: false
+            verMas: false,
+            favorito: false
         }
     }
 
@@ -22,6 +23,60 @@ class Articulo extends Component {
         this.setState({
             verMas: false
         })
+    }
+
+    agrearAFavoritos() {
+        let elementoFavorito = {
+            id: this.props.id,
+            titulo: this.props.titulo,
+            foto_album: this.props.foto_album,
+            nombre_artista: this.props.nombre_artista,
+            titulo_album: this.props.titulo_album,
+            duracion: this.props.duracion,
+            ranking: this.props.ranking
+        }
+
+        let favoritos = JSON.parse(localStorage.getItem("favoritos"))
+
+        if (favoritos === null) {
+            favoritos = []
+        }
+
+        favoritos.push(elementoFavorito)
+
+        localStorage.setItem("favoritos", JSON.stringify(favoritos))
+
+        this.setState({
+            favorito: true
+        })
+
+    }
+
+    quitarDeFavoritos() {
+        
+        let favoritos = JSON.parse(localStorage.getItem("favoritos"))
+
+        let favoritosSinElemento = favoritos.filter((elm) => elm.id !== this.props.id)
+
+        localStorage.setItem("favoritos", JSON.stringify(favoritosSinElemento))
+
+        this.setState({
+            favorito: false
+        })
+    }
+
+    componentDidMount() {
+        let favoritos = JSON.parse(localStorage.getItem("favoritos"))
+
+        if (favoritos !== null) {
+            let favorito = favoritos.filter((elm) => elm.id === this.props.id)
+
+            if (favorito.length > 0) {
+                this.setState({
+                    favorito: true
+                })
+            }
+        }
     }
 
     render() {
@@ -61,6 +116,11 @@ class Articulo extends Component {
                     this.props.duracion !== null ?
                     <Link to={`/cancion/${this.props.id}`}>Ir a detalle</Link> :
                     <Link to={`/album/${this.props.id}`}>Ir a detalle</Link>
+                }
+                {
+                    this.state.favorito ?
+                    <button onClick={() => this.quitarDeFavoritos()}>Quitar de favoritos</button> :
+                    <button onClick={() => this.agrearAFavoritos()}>Agregar a favoritos</button>
                 }
             </article>
         )

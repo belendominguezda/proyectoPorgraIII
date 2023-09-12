@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
+
 import "./Buscador.css";
 
 class Buscador extends Component {
@@ -7,16 +9,6 @@ class Buscador extends Component {
         super(props)
         this.state = {
             busqueda: ""
-        }
-    }
-
-    prevenirBusqueda(evento) {
-        evento.preventDefault();
-
-        if (this.state.busqueda !== "") {
-            console.log(this.state.busqueda);
-        } else {
-            console.log("No se ha buscado nada")
         }
     }
 
@@ -28,9 +20,9 @@ class Buscador extends Component {
 
     render() {
         return (
-            <form onSubmit={(e) => this.prevenirBusqueda(e)}>
+            <form>
                 <input onChange={(e) => this.guardarCambios(e)} type="text" name="busqueda" value={this.state.busqueda} />
-                <button type="submit">Buscar</button>
+                <button type="submit"><Link to={`/resultado-busqueda/${this.state.busqueda}`}>Buscar</Link></button>
             </form>
         );
     }
