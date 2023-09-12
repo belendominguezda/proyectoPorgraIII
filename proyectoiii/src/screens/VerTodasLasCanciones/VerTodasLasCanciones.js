@@ -85,6 +85,8 @@ class VerTodasLasCanciones extends Component {
                     <button type="submit">Filtrar</button>
                 </form>
                 {
+                    this.state.listadoCanciones.length === 0 ?
+                    <h2> CARGANDO...</h2>:
                     this.state.listadoCancionesAMostrarFiltrado.length > 0 ?
                     this.state.listadoCancionesAMostrarFiltrado.map((cancion, i) =>
                         <Articulo 

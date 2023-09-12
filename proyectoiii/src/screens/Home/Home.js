@@ -44,6 +44,9 @@ class Home extends Component {
                     <h1>Top 5 canciones</h1>
                     <section className="seccion1">
                         {
+                            this.state.listadaCanciones.length === 0 ?
+                            <h2> CARGANDO...</h2>:
+                    
                             this.state.listadaCanciones.map((cancion, i) => 
                                 <Articulo 
                                     key={i} 
@@ -62,7 +65,18 @@ class Home extends Component {
                     <h1>Top 5 albums</h1>
                     <section className="seccion2">
                         {
-                            this.state.listadoAlbums.map((album, i) => <Articulo key={i} id={album.id} titulo={album.title} foto_album={album.cover_medium} nombre_artista={album.artist.name} titulo_album={null} duracion={null} ranking={null} />)
+                            this.state.listadoAlbums.length === 0 ?
+                            <h2> CARGANDO...</h2>:
+                            this.state.listadoAlbums.map((album, i) => 
+                            <Articulo 
+                            key={i} 
+                            id={album.id} 
+                            titulo={album.title} 
+                            foto_album={album.cover_medium} 
+                            nombre_artista={album.artist.name} 
+                            titulo_album={null} 
+                            duracion={null} 
+                            ranking={null} />)
                         }
                     </section>
                 </main>

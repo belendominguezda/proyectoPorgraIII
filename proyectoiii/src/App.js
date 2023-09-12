@@ -8,6 +8,7 @@ import VerTodasLasCanciones from './screens/VerTodasLasCanciones/VerTodasLasCanc
 import ResultadoBusqueda from './components/ResultadosBusqueda/ResultadoBusqueda';
 
 import './styles.css'
+import VerTodosLosAlbums from './screens/VerTodosLosAlbums/VerTodosLosAlbums';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/album/:id" component={""} /> {/*Detalle album*/}
         <Route path="/favoritos" component={Favoritos} />
         <Route path="/ver-todas-las-canciones" component={VerTodasLasCanciones} /> {/*Ver todas las canciones*/}
-        <Route path="/ver-todos-los-albums" component={""} /> {/*Ver todos los albums*/}
+        <Route path="/ver-todos-los-albums" component={VerTodosLosAlbums} /> {/*Ver todos los albums*/}
         <Route path="/resultado-busqueda/:busqueda" component={ResultadoBusqueda} />
         <Route component = {NotFound}/>
       </Switch>
