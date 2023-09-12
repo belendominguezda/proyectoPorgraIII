@@ -35,7 +35,6 @@ class Home extends Component {
             })
             .catch(error => console.log(error))
     }
-
     render() {
         return (
             <>
@@ -45,7 +44,18 @@ class Home extends Component {
                     <h1>Top 5 canciones</h1>
                     <section className="seccion1">
                         {
-                            this.state.listadaCanciones.map((cancion, i) => <Articulo key={i} id={cancion.id} titulo={cancion.title} foto_album={cancion.album.cover_medium} nombre_artista={cancion.artist.name} titulo_album={cancion.album.title} duracion={cancion.duracion} ranking={cancion.rank} />)
+                            this.state.listadaCanciones.map((cancion, i) => 
+                                <Articulo 
+                                    key={i} 
+                                    id={cancion.id} 
+                                    titulo={cancion.title} 
+                                    foto_album={cancion.album.cover_medium} 
+                                    nombre_artista={cancion.artist.name} 
+                                    titulo_album={cancion.album.title} 
+                                    duracion={cancion.duracion} 
+                                    ranking={cancion.rank} 
+                                />
+                            )
                         }
                         <p></p>
                     </section>
