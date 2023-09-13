@@ -1,5 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
 img {
     width: 140px;
     height: auto;
+
 }
 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    justify-content: space-around;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 40px 20px 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: initial;
+    width: auto;
+}
