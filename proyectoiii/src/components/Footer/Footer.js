@@ -3,9 +3,9 @@ import "./Footer.css";
 function Footer() {
     return (
         <footer>
-            <p>Virginia</p>
-            <p>Belen</p>
-            <p>Josefina</p>
+            <p>Josefina Bayugar</p>
+            <p>Belén Domínguez</p>
+            <p>Virginia Rey Leyes</p>
         </footer>
     );
 }
