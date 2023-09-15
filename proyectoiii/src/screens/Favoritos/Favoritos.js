@@ -53,3 +53,38 @@ class Favoritos extends Component {
                                 id={cancion.id} 
                                 titulo={cancion.titulo} 
                                 foto_album={cancion.foto_album}
+                                nombre_artista={cancion.nombre_artista} 
+                                titulo_album={cancion.titulo_album} 
+                                duracion={cancion.duracion} 
+                                ranking={cancion.ranking} 
+                                />
+                                )
+                            }
+                        </>
+
+                    }
+                    
+                    <h1>Albumes favoritos</h1>
+                    {
+                        this.state.listadoAlbums.map((album, i) =>
+                        <Articulo
+                        key={i} 
+                        id={album.id} 
+                        titulo={album.titulo} 
+                        foto_album={album.foto_album} 
+                        nombre_artista={album.nombre_artista} 
+                        titulo_album={album.titulo_album} 
+                        duracion={album.duracion} 
+                        ranking={album.ranking} 
+                        />
+                        )
+
+                    }
+                </main>
+                <Footer />
+            </>
+        )
+    }
+}
+
+export default Favoritos;
