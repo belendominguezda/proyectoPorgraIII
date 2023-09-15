@@ -20,7 +20,7 @@ class VerTodosLosAlbums extends Component {
     }
 
     componentDidMount() {
-        fetch("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&limit=299")
+        fetch("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&limit=299")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -93,11 +93,8 @@ class VerTodosLosAlbums extends Component {
                             key={i} 
                             id={album.id} 
                             titulo={album.title} 
-                            foto_album={album.album.cover_medium} 
-                            nombre_artista={album.artist.name} 
-                            titulo_album={album.album.title} 
-                            duracion={album.duracion} 
-                            ranking={album.rank} 
+                            foto_album={album.cover_medium} 
+                            nombre_artista={album.artist.name}
                         />
                     ) :
                     this.state.listadoAlbumsAMostrar.map((album, i) => 
@@ -105,11 +102,8 @@ class VerTodosLosAlbums extends Component {
                             key={i} 
                             id={album.id} 
                             titulo={album.title} 
-                            foto_album={album.album.cover_medium} 
+                            foto_album={album.cover_medium} 
                             nombre_artista={album.artist.name} 
-                            titulo_album={album.album.title} 
-                            duracion={album.duracion} 
-                            ranking={album.rank} 
                         />
                     )
                 }
