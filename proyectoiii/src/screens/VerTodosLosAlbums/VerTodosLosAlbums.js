@@ -5,7 +5,7 @@ import Buscador from "../../components/Buscador/Buscador";
 import Footer from "../../components/Footer/Footer";
 import Articulo from "../../components/Articulo/Articulo";
 
-//import "./VerTodasLosAlbums.css";
+import "./VerTodosLosAlbums.css";
 
 class VerTodosLosAlbums extends Component {
     constructor(props) {
@@ -84,6 +84,7 @@ class VerTodosLosAlbums extends Component {
                     <input onChange={(event) => this.filtrar(event)} placeholder="Ingrese una palabra" value={this.state.filtro} />
                     <button type="submit">Filtrar</button>
                 </form>
+                <div className="ver-todos-albums">
                 {
                     this.state.listadoAlbums.length === 0 ?
                     <h2> CARGANDO...</h2>:
@@ -107,6 +108,7 @@ class VerTodosLosAlbums extends Component {
                         />
                     )
                 }
+                </div>
                 <button onClick={() => this.mostrarMas()}>Cargar más Albums</button>
                 <Footer />
             </>

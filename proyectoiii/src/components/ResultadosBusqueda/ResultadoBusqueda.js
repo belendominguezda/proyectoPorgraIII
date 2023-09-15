@@ -50,6 +50,7 @@ class ResultadosBusqueda extends Component {
                     <p>{this.state.busqueda}</p> :
                     <p>Cargando...</p>
                 }
+                <div className='resultado'>
                 {
                     this.state.resultados.length > 0 ?
                     this.state.resultados.map((resultado, i) =>
@@ -65,6 +66,7 @@ class ResultadosBusqueda extends Component {
                         />) :
                     <p>Cargando...</p>
                 }
+                </div>
                 <Footer />
             </>
         )

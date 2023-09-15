@@ -84,6 +84,8 @@ class VerTodasLasCanciones extends Component {
                     <input onChange={(event) => this.filtrar(event)} placeholder="Ingrese una palabra" value={this.state.filtro} />
                     <button type="submit">Filtrar</button>
                 </form>
+
+                <div className="ver-todas-canciones">
                 {
                     this.state.listadoCanciones.length === 0 ?
                     <h2> CARGANDO...</h2>:
@@ -99,7 +101,7 @@ class VerTodasLasCanciones extends Component {
                             duracion={cancion.duracion} 
                             ranking={cancion.rank} 
                         />
-                    ) :
+                    ) : 
                     this.state.listadoCancionesAMostrar.map((cancion, i) => 
                         <Articulo 
                             key={i} 
@@ -113,6 +115,7 @@ class VerTodasLasCanciones extends Component {
                         />
                     )
                 }
+                </div>
                 <button onClick={() => this.mostrarMas()}>Cargar más canciones</button>
                 <Footer />
             </>

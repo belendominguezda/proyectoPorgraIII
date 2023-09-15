@@ -42,6 +42,8 @@ class Favoritos extends Component {
                 <Buscador />
                 <main>
                     <h1>Canciones favoritas</h1>
+
+                    <section className="seccion1">
                     {
                         this.state.listadoCanciones.length === 0 ?
                         <p>¡No tiene canciones en sus favoritos!</p> :
@@ -63,9 +65,12 @@ class Favoritos extends Component {
                         </>
 
                     }
-                    
+                    </section>
                     <h1>Albumes favoritos</h1>
+
+                    <section className="seccion2">
                     {
+                        
                         this.state.listadoAlbums.map((album, i) =>
                         <Articulo
                         key={i} 
@@ -80,7 +85,8 @@ class Favoritos extends Component {
                         )
 
                     }
-                </main>
+                    </section>
+                    </main>
                 <Footer />
             </>
         )

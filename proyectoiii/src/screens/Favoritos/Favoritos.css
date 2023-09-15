@@ -1,0 +1,15 @@
+.seccion1, .seccion2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2vh 0;
+
+}
+
+main {
+    background-color: rgb(38, 38, 38);
+}
+
+
+

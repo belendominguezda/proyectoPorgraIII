@@ -5,7 +5,7 @@ import "./Header.css";
 function Header() {
     return (
         <header>
-           <img src="../img/spotify.jpg" alt="Logo de la app" />
+           <img className="logo" src="../img/logo2.jpeg" alt="Logo de la app" />
            <h1>Musiqué</h1>
            <nav className="navegacion">
                 <ul className="lista">

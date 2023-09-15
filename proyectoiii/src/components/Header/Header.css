@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-img {
+.logo {
     width: 140px;
     height: auto;
 
@@ -63,4 +63,13 @@ nav ul {
 
 header {
     background-color: rgb(18, 17, 17);
+}
+
+h1 {
+    color: white;
+}
+
+.recuadro a {
+    color: white;
+    text-decoration: none;
 }
