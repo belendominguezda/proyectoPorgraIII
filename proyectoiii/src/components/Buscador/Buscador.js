@@ -20,9 +20,9 @@ class Buscador extends Component {
 
     render() {
         return (
-            <form>
-                <input onChange={(e) => this.guardarCambios(e)} type="text" name="busqueda" value={this.state.busqueda} />
-                <button type="submit"><Link to={`/resultado-busqueda/${this.state.busqueda}`}>Buscar</Link></button>
+            <form className="formularioHeader">
+                <input className="buscador" onChange={(e) => this.guardarCambios(e)} type="text" name="busqueda" value={this.state.busqueda} />
+                <button className="buscador" type="submit"><Link to={`/resultado-busqueda/${this.state.busqueda}`}>Buscar</Link></button>
             </form>
         );
     }

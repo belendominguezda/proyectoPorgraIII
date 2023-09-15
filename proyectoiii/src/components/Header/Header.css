@@ -37,3 +37,30 @@ nav ul {
     margin: initial;
     width: auto;
 }
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
+
+.lista li {
+    list-style-type: none;
+    margin: 30px;
+}
+
+.recuadro{
+    border: 3px solid white;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 8px;
+
+}
+
+header {
+    background-color: rgb(18, 17, 17);
+}

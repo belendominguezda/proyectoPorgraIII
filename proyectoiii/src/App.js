@@ -9,7 +9,6 @@ import VerTodasLasCanciones from './screens/VerTodasLasCanciones/VerTodasLasCanc
 import VerTodosLosAlbums from './screens/VerTodosLosAlbums/VerTodosLosAlbums';
 import ResultadoBusqueda from './components/ResultadosBusqueda/ResultadoBusqueda';
 
-import './styles.css'
 
 function App() {
   return (
